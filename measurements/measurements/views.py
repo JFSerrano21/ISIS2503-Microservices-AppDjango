@@ -17,7 +17,7 @@ def check_variable(data):
     return False
 
 def check_place(data):
-    r = requests.get(settings.PATH_VAR, headers={"Accept":"application/json"})
+    r = requests.get(settings.PATH_PLACE, headers={"Accept":"application/json"})
     places = r.json()
     for place in places:
         if data["place"] == place["id"]:
